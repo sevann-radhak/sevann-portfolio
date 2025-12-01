@@ -1,0 +1,154 @@
+# .NET
+**/bin/
+**/obj/
+**/.vs/
+*.user
+*.suo
+*.cache
+*.dll
+*.pdb
+*.exe
+*.log
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+*.sln.iml
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+.vite/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Azure
+.azure/
+*.publishsettings
+*.azurePubxml
+
+# Test results
+TestResults/
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+coverage/
+*.coverage
+*.coveragexml
+.nyc_output/
+
+# NuGet
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# SQL Server
+*.mdf
+*.ldf
+*.ndf
+
+# Backup files
+*.bak
+*.tmp
+*.temp
+
+# Secrets
+secrets.json
+appsettings.Development.json
+appsettings.Local.json
+*.pfx
+*.key
+
+# Misc
+*.cache
+.cache/
+*.orig
+
+# Internal documentation and strategy files (not for public repo)
+REPOSITORY_STRATEGY.md
+CONTEXT.md
+STEP_*.md
+*_STRATEGY.md
+*_SETUP.md
+*_CONTEXT.md
+*.strategy.md
+*.setup.md
+*.context.md
+
+# Spanish documentation (will be replaced with English versions)
+docs/PORTFOLIO_ARCHITECTURE.md
+
+# Deployment guide (internal only)
+docs/DEPLOYMENT.md
+
