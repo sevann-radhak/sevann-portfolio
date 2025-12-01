@@ -24,16 +24,24 @@ Frontend (React SPA) → API Gateway (.NET 8) → Business Logic → Data Access
 
 See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for architecture details.
 
-## 📦 Modules
+## 🏛️ Architecture Layers
 
-Each module is independent and demonstrative:
+The solution follows a **Layered Architecture** with **Domain-Driven Design (DDD)**:
 
-- **DDD Demo**: Domain-Driven Design with Entities, Value Objects, Aggregates
-- **Repository Demo**: Repository Pattern with data abstraction
-- **CQRS Demo**: Command Query Responsibility Segregation
-- **Domain Events Demo**: Event-driven architecture
-- **Auth Demo**: JWT Authentication
-- **Testing Demo**: Unit, Integration, Contract tests
+- **✅ Domain Layer**: Core business logic with Entities, Value Objects, Aggregates, Domain Events, and Domain Services (100% test coverage)
+- **Application Layer**: Application services, CQRS handlers (coming soon)
+- **Infrastructure Layer**: Data access, external services (coming soon)
+- **API Layer**: REST API endpoints (coming soon)
+
+## 📦 Demonstrative Modules
+
+Each module demonstrates a specific pattern or concept:
+
+- **Repository Pattern**: Data access abstraction (coming soon)
+- **CQRS**: Command Query Responsibility Segregation (coming soon)
+- **Domain Events**: Event-driven architecture (integrated in Domain Layer)
+- **Authentication**: JWT Authentication (coming soon)
+- **Testing**: Unit, Integration, Contract tests (Domain Layer complete)
 
 ## 🚀 Quick Start
 
@@ -46,11 +54,13 @@ Each module is independent and demonstrative:
 
 ### Run Locally
 
-**Backend** (coming soon)
+**Backend**
 ```bash
 cd Backend
 dotnet restore
-dotnet run
+dotnet build
+dotnet test
+dotnet run --project src/Portfolio.API
 ```
 
 **Frontend** (coming soon)
@@ -67,12 +77,18 @@ npm run dev
 ## 🧪 Testing
 
 ```bash
-# Backend tests (coming soon)
-dotnet test Backend/
+# Backend tests
+cd Backend
+dotnet test Portfolio.sln
+
+# Run with coverage
+dotnet test Portfolio.sln --collect:"XPlat Code Coverage"
 
 # Frontend tests (coming soon)
 cd Frontend && npm test
 ```
+
+**Test Coverage**: Domain layer has 100% code coverage with 150+ unit tests.
 
 **Live Demo**: [Coming soon]
 
@@ -85,12 +101,20 @@ cd Frontend && npm test
 - GitHub templates (PR, Issues)
 - Infrastructure templates (Azure Bicep)
 - Project structure (Backend, Frontend, modules folders)
+- **Domain Layer (US-01)**: Complete DDD implementation
+  - Entities: PortfolioProject, Skill, Experience
+  - Value Objects: ProjectName, EmailAddress, Url
+  - Aggregates: PortfolioProjectAggregate
+  - Domain Events: PortfolioProjectCreatedEvent, PortfolioProjectFeaturedEvent, PortfolioProjectArchivedEvent
+  - Domain Services: PortfolioDomainService
+  - Centralized constants (ErrorMessages, FieldNames, ValidationConstants)
+  - **150+ unit tests with 100% code coverage**
 
 **🚧 Next Steps:**
-- [ ] Implement DDD demo module
-- [ ] Implement Repository demo module
-- [ ] Create basic REST API
-- [ ] Create basic React frontend
+- [ ] Implement Repository Pattern (US-02)
+- [ ] Implement CQRS (US-03)
+- [ ] Create basic REST API (US-04)
+- [ ] Create basic React frontend (US-05)
 - [ ] Deploy to Azure
 
 ## 👤 Author

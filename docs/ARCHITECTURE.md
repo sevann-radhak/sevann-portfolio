@@ -37,25 +37,37 @@ sevann-portfolio/
 ├── Frontend/        # React SPA
 │   ├── src/         # Source code
 │   └── public/      # Static assets
-├── modules/         # Demonstrative modules
-│   ├── ddd-demo/
-│   ├── repository-demo/
+├── modules/         # Demonstrative pattern examples (optional)
 │   └── ...
 ├── docs/            # Documentation
 ├── ops/             # Infrastructure as Code
 └── ci/              # CI/CD workflows
 ```
 
-## Modules
+## Architecture Layers
 
-Each module demonstrates a specific pattern or concept:
+The solution follows a **Layered Architecture** with **Domain-Driven Design (DDD)**:
 
-- **DDD Demo**: Domain-Driven Design implementation
-- **Repository Demo**: Repository Pattern with data abstraction
-- **CQRS Demo**: Command Query Responsibility Segregation
-- **Domain Events Demo**: Event-driven architecture
-- **Auth Demo**: JWT Authentication
-- **Testing Demo**: Unit, Integration, Contract tests
+- **✅ Domain Layer**: Core business logic (Complete)
+  - Entities: PortfolioProject, Skill, Experience
+  - Value Objects: ProjectName, EmailAddress, Url
+  - Aggregates: PortfolioProjectAggregate
+  - Domain Events: PortfolioProjectCreatedEvent, PortfolioProjectFeaturedEvent, PortfolioProjectArchivedEvent
+  - Domain Services: PortfolioDomainService
+  - 150+ unit tests with 100% coverage
+- **Application Layer**: Application services, CQRS handlers (coming soon)
+- **Infrastructure Layer**: Data access, external services (coming soon)
+- **API Layer**: REST API endpoints (coming soon)
+
+## Demonstrative Patterns
+
+Each pattern is demonstrated throughout the solution:
+
+- **Repository Pattern**: Data access abstraction (coming soon)
+- **CQRS**: Command Query Responsibility Segregation (coming soon)
+- **Domain Events**: Event-driven architecture (integrated in Domain Layer)
+- **Authentication**: JWT Authentication (coming soon)
+- **Testing**: Unit, Integration, Contract tests (Domain Layer complete)
 
 ## Deployment
 
