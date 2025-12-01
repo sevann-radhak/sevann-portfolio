@@ -152,3 +152,9 @@ docs/PORTFOLIO_ARCHITECTURE.md
 # Deployment guide (internal only)
 docs/DEPLOYMENT.md
 
+# Issue templates content (internal reference)
+.github/US-*.md
+
+# Azure setup guide (internal reference)
+docs/AZURE_SETUP.md
+
